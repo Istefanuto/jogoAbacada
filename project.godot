@@ -1,0 +1,32 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="jogoAbacada"
+run/main_scene="res://inicio.tscn"
+config/features=PackedStringArray("4.6", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+GameData="*res://game_data.gd"
+CartasSilabaA="*res://cartas_silaba_a.gd"
+Musica="*res://musica.gd"
+Audios="*res://Audios.tscn"
+Menu="*res://Menu.tscn"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"

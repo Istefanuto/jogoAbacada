@@ -1,0 +1,227 @@
+[gd_scene format=3 uid="uid://c5qylq6o6nx4m"]
+
+[ext_resource type="Texture2D" uid="uid://qeodfps2p40f" path="res://cenárioPrincipal.png" id="1_c8gqm"]
+[ext_resource type="Script" uid="uid://dyy24yy05ljke" path="res://cenario_principal.gd" id="1_vwc01"]
+[ext_resource type="Texture2D" uid="uid://bs4d7a5bhpxdj" path="res://meninoCostas.png" id="3_iqori"]
+[ext_resource type="Texture2D" uid="uid://dsxqfhgy6ywp1" path="res://meninaCostas.png" id="4_epgja"]
+[ext_resource type="Texture2D" uid="uid://c4cg5d1o1psw0" path="res://telaopçoes.png" id="5_1rjlt"]
+[ext_resource type="Texture2D" uid="uid://bk5n164doyvq6" path="res://CARTA GATA.png" id="5_iqori"]
+[ext_resource type="Script" uid="uid://c06d588s4j3ni" path="res://label_silaba.gd" id="7_1aabk"]
+[ext_resource type="Script" uid="uid://ci4ecyv6ugi7c" path="res://label_palavra.gd" id="7_pxtp8"]
+[ext_resource type="Texture2D" uid="uid://dpymf1wislskd" path="res://quadradoSilaba1.png" id="8_4g6kv"]
+[ext_resource type="Texture2D" uid="uid://bogq6lp3jt52q" path="res://quadradoSilaba2.png" id="9_e5ttp"]
+[ext_resource type="Texture2D" uid="uid://bbchsyk0626ev" path="res://quadradoSilaba3.png" id="10_6sutd"]
+[ext_resource type="Texture2D" uid="uid://pecyqqpdrw5t" path="res://vezPersonagemMenino.png" id="11_6sutd"]
+[ext_resource type="Texture2D" uid="uid://b3cgo52lbkndu" path="res://vezPersonagemMenina.png" id="12_de6g1"]
+[ext_resource type="Texture2D" uid="uid://1r7f6plm45e1" path="res://DADO.png" id="13_fdswt"]
+[ext_resource type="Texture2D" uid="uid://cdwnrs2ejrfax" path="res://DADOlado1.png" id="14_pxtp8"]
+[ext_resource type="Texture2D" uid="uid://cvyseqjbna27i" path="res://Dadolado2.png" id="15_ucht6"]
+[ext_resource type="Texture2D" uid="uid://bjjg28b5tt6ps" path="res://meninaNadando.png" id="16_p4nfd"]
+[ext_resource type="Texture2D" uid="uid://dbvff6i05l83x" path="res://meninoNadando.png" id="17_njox8"]
+[ext_resource type="Texture2D" uid="uid://de47qw4ndch30" path="res://meninoOnda.png" id="19_jh32e"]
+[ext_resource type="Texture2D" uid="uid://d3rl8tf6jrr3b" path="res://meninaOnda.png" id="20_t726d"]
+[ext_resource type="Texture2D" uid="uid://c3cxekia72wwn" path="res://meninoEstrela.png" id="21_kwb2v"]
+[ext_resource type="Texture2D" uid="uid://bbdf1hlw1t6jo" path="res://meninaEstrela.png" id="22_upuuw"]
+[ext_resource type="Texture2D" uid="uid://b0fcqi7eu2ewd" path="res://meninaVenceu.png" id="23_2u5nd"]
+[ext_resource type="Texture2D" uid="uid://dr5sgugn770nt" path="res://meninoVenceu.png" id="24_axgp7"]
+[ext_resource type="Script" uid="uid://nguhywnnn8ll" path="res://label_vencedor.gd" id="25_t726d"]
+[ext_resource type="Texture2D" uid="uid://cs4hsxx8aus54" path="res://meninoErro.png" id="26_upuuw"]
+[ext_resource type="Texture2D" uid="uid://kfv3t16hsb1r" path="res://meninaErro.png" id="27_2u5nd"]
+[ext_resource type="AudioStream" uid="uid://bwi27ogorwjrl" path="res://somErro.mp3" id="28_c8xis"]
+[ext_resource type="AudioStream" uid="uid://d0nmmrmjslvpl" path="res://assets/audios/acertou.ogg" id="29_c8xis"]
+[ext_resource type="AudioStream" uid="uid://xohf288s0cep" path="res://somOnda.mp3" id="30_f3dbt"]
+[ext_resource type="AudioStream" uid="uid://nda17p2ojsm0" path="res://assets/audios/como_jogar/jogador1SuaVez.mp3" id="31_f3dbt"]
+[ext_resource type="AudioStream" uid="uid://d1g6b82wiyyf6" path="res://assets/audios/como_jogar/jogador2SuaVez.mp3" id="32_idxvv"]
+
+[node name="Node2D" type="Node2D" unique_id=272268397]
+script = ExtResource("1_vwc01")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1568030952]
+position = Vector2(572.00006, 325.75)
+scale = Vector2(0.92246836, 0.7774498)
+texture = ExtResource("1_c8gqm")
+
+[node name="personagemMenino" type="Sprite2D" parent="." unique_id=1138666825]
+position = Vector2(459, 441)
+scale = Vector2(0.5057872, 0.35596323)
+texture = ExtResource("3_iqori")
+
+[node name="personagemMenina" type="Sprite2D" parent="." unique_id=878657279]
+position = Vector2(694, 444)
+scale = Vector2(0.48443222, 0.36025634)
+texture = ExtResource("4_epgja")
+
+[node name="telaOpcoes" type="Sprite2D" parent="." unique_id=172396856]
+position = Vector2(574.50006, 323.49997)
+scale = Vector2(0.9216773, 0.7827627)
+texture = ExtResource("5_1rjlt")
+
+[node name="Carta" type="Sprite2D" parent="telaOpcoes" unique_id=2092833980]
+position = Vector2(-10.307341, -79.84535)
+scale = Vector2(0.7857495, 0.7914746)
+texture = ExtResource("5_iqori")
+
+[node name="LabelPalavra" type="Label" parent="telaOpcoes" unique_id=1718485677]
+offset_left = -642.8498
+offset_top = -415.8348
+offset_right = 633.0849
+offset_bottom = -303.41248
+script = ExtResource("7_pxtp8")
+
+[node name="BtnSilaba1" type="TextureButton" parent="." unique_id=377585193]
+offset_left = 276.0
+offset_top = 458.0
+offset_right = 411.0
+offset_bottom = 584.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("8_4g6kv")
+
+[node name="LabelSilaba" type="Label" parent="BtnSilaba1" unique_id=1760044141]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("7_1aabk")
+
+[node name="BtnSilaba2" type="TextureButton" parent="." unique_id=1828627031]
+offset_left = 478.0
+offset_top = 457.0
+offset_right = 604.0
+offset_bottom = 579.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("9_e5ttp")
+
+[node name="LabelSilaba" type="Label" parent="BtnSilaba2" unique_id=994248851]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("7_1aabk")
+
+[node name="BtnSilaba3" type="TextureButton" parent="." unique_id=1471474561]
+offset_left = 665.0
+offset_top = 466.0
+offset_right = 793.0
+offset_bottom = 577.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("10_6sutd")
+
+[node name="LabelSilaba" type="Label" parent="BtnSilaba3" unique_id=1025180655]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("7_1aabk")
+
+[node name="vezPersonagemMenino" type="Sprite2D" parent="." unique_id=627822915]
+position = Vector2(573.5, 321)
+scale = Vector2(0.84375, 0.8645833)
+texture = ExtResource("11_6sutd")
+
+[node name="vezPersonagemMenina" type="Sprite2D" parent="." unique_id=1684467097]
+position = Vector2(576.50006, 322.5)
+scale = Vector2(0.849564, 0.8658854)
+texture = ExtResource("12_de6g1")
+
+[node name="DadoMenino" type="TextureButton" parent="." unique_id=693743154]
+offset_left = 113.0
+offset_top = 329.0
+offset_right = 275.0
+offset_bottom = 490.0
+texture_normal = ExtResource("13_fdswt")
+
+[node name="dadoMenino1" type="Sprite2D" parent="DadoMenino" unique_id=1614059572]
+position = Vector2(80, 80)
+scale = Vector2(0.9197531, 0.9037267)
+texture = ExtResource("14_pxtp8")
+
+[node name="dadoMenino2" type="Sprite2D" parent="DadoMenino" unique_id=1259425186]
+position = Vector2(83.00001, 78.000015)
+scale = Vector2(0.9382716, 0.8913044)
+texture = ExtResource("15_ucht6")
+
+[node name="dadoMenina" type="TextureButton" parent="." unique_id=2130348486]
+offset_left = 860.0
+offset_top = 346.0
+offset_right = 1066.0
+offset_bottom = 507.0
+texture_normal = ExtResource("13_fdswt")
+
+[node name="dadoMenina1" type="Sprite2D" parent="dadoMenina" unique_id=186212832]
+position = Vector2(85, 79.000015)
+scale = Vector2(0.9259259, 0.93788815)
+texture = ExtResource("14_pxtp8")
+
+[node name="dadoMenina2" type="Sprite2D" parent="dadoMenina" unique_id=1718891124]
+position = Vector2(87, 77)
+scale = Vector2(0.91358024, 0.92236024)
+texture = ExtResource("15_ucht6")
+
+[node name="meninaNadando" type="Sprite2D" parent="." unique_id=1951122248]
+position = Vector2(675, 418)
+scale = Vector2(0.3374544, 0.27179474)
+texture = ExtResource("16_p4nfd")
+
+[node name="meninoNadando" type="Sprite2D" parent="." unique_id=1340102671]
+position = Vector2(476.00003, 414)
+scale = Vector2(0.3655498, 0.2609833)
+texture = ExtResource("17_njox8")
+
+[node name="meninoOnda" type="Sprite2D" parent="." unique_id=771899285]
+position = Vector2(573.5, 321.99997)
+scale = Vector2(0.8510174, 0.8567709)
+texture = ExtResource("19_jh32e")
+
+[node name="meninaOnda" type="Sprite2D" parent="." unique_id=1348637886]
+position = Vector2(576.75, 325)
+scale = Vector2(0.85065407, 0.8645833)
+texture = ExtResource("20_t726d")
+
+[node name="meninoEstrela" type="Sprite2D" parent="." unique_id=1130228853]
+position = Vector2(576, 326)
+scale = Vector2(0.8510174, 0.859375)
+texture = ExtResource("21_kwb2v")
+
+[node name="meninaEstrela" type="Sprite2D" parent="." unique_id=1019206188]
+position = Vector2(577.5, 322)
+scale = Vector2(0.84811044, 0.8619792)
+texture = ExtResource("22_upuuw")
+
+[node name="meninaVenceu" type="Sprite2D" parent="." unique_id=1696179131]
+position = Vector2(576.5, 324)
+scale = Vector2(0.849564, 0.8619792)
+texture = ExtResource("23_2u5nd")
+
+[node name="meninoVenceu" type="Sprite2D" parent="." unique_id=343421552]
+position = Vector2(578.5, 322.99994)
+scale = Vector2(0.8510175, 0.86197907)
+texture = ExtResource("24_axgp7")
+
+[node name="LabelVencedor" type="Label" parent="." unique_id=1554285418]
+offset_right = 1168.0
+offset_bottom = 125.0
+script = ExtResource("25_t726d")
+
+[node name="meninoErro" type="Sprite2D" parent="." unique_id=1232987097]
+position = Vector2(581.25, 331.5)
+scale = Vector2(0.8536674, 0.86328125)
+texture = ExtResource("26_upuuw")
+
+[node name="meninaErro" type="Sprite2D" parent="." unique_id=1736730876]
+position = Vector2(574.5, 323.99997)
+scale = Vector2(0.8553779, 0.859375)
+texture = ExtResource("27_2u5nd")
+
+[node name="somErro" type="AudioStreamPlayer2D" parent="." unique_id=1839054373]
+stream = ExtResource("28_c8xis")
+
+[node name="somAcerto" type="AudioStreamPlayer2D" parent="." unique_id=223578033]
+stream = ExtResource("29_c8xis")
+
+[node name="somOnda" type="AudioStreamPlayer2D" parent="." unique_id=910874466]
+stream = ExtResource("30_f3dbt")
+
+[node name="vezJogador1" type="AudioStreamPlayer2D" parent="." unique_id=425190297]
+stream = ExtResource("31_f3dbt")
+volume_db = 18.0
+
+[node name="vezJogador2" type="AudioStreamPlayer2D" parent="." unique_id=810562694]
+stream = ExtResource("32_idxvv")
+volume_db = 18.0

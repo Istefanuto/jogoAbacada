@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://bgymmjdb4txem"]
+
+[ext_resource type="Script" uid="uid://degr1t2437kvq" path="res://node_2d.gd" id="1_4osol"]
+[ext_resource type="Texture2D" uid="uid://bbbyakyyxlcj" path="res://quemVaiComecarojogo.png" id="2_acias"]
+[ext_resource type="Texture2D" uid="uid://cim0wfukmpo56" path="res://cardMenino.png" id="3_mcv6n"]
+[ext_resource type="Texture2D" uid="uid://3e2xq1ehftk1" path="res://cardMenina.png" id="4_av55f"]
+[ext_resource type="Texture2D" uid="uid://c7fn0vwo7tdij" path="res://botãoSortear.png" id="5_ln3b4"]
+[ext_resource type="Script" uid="uid://dopxmp2ls13ku" path="res://label_resultado.gd" id="6_mcv6n"]
+[ext_resource type="Texture2D" uid="uid://b0e8hgcnycg2p" path="res://botaoConfirmar.png" id="7_mcv6n"]
+[ext_resource type="AudioStream" uid="uid://bdyn21cwd6njv" path="res://assets/audios/como_jogar/jogador1Sorteado.mp3" id="8_swln3"]
+[ext_resource type="AudioStream" uid="uid://bcbpbgcixh3co" path="res://assets/audios/como_jogar/jogador2Sorteado.mp3" id="9_48ix3"]
+[ext_resource type="AudioStream" uid="uid://cpdefn4y0uwrw" path="res://assets/audios/como_jogar/anuncioSorteioSom.mp3" id="10_t0ggh"]
+[ext_resource type="AudioStream" uid="uid://ctxp73aff30ly" path="res://assets/audios/como_jogar/botaoComecarCorrida.mp3" id="11_48ix3"]
+
+[node name="Node2D" type="Node2D" unique_id=1325901377]
+script = ExtResource("1_4osol")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=764364962]
+position = Vector2(576.5, 324.5)
+scale = Vector2(0.8452034, 0.8658855)
+texture = ExtResource("2_acias")
+
+[node name="cardMenino" type="Sprite2D" parent="." unique_id=591746135]
+position = Vector2(441.03125, 334.6875)
+scale = Vector2(0.6739817, 0.6162736)
+texture = ExtResource("3_mcv6n")
+
+[node name="cardMenina" type="Sprite2D" parent="." unique_id=477382268]
+position = Vector2(735, 326)
+scale = Vector2(0.66625357, 0.62629217)
+texture = ExtResource("4_av55f")
+
+[node name="botaoSortear" type="TextureButton" parent="." unique_id=1152206177]
+offset_left = 501.0
+offset_top = 511.0
+offset_right = 724.0
+offset_bottom = 709.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("5_ln3b4")
+
+[node name="LabelResultado" type="Label" parent="." unique_id=1028342913]
+offset_top = 96.0
+offset_right = 1152.0
+offset_bottom = 142.0
+script = ExtResource("6_mcv6n")
+
+[node name="botaoComecar" type="TextureButton" parent="." unique_id=1115517639]
+offset_left = 501.99997
+offset_top = 508.0
+offset_right = 725.0
+offset_bottom = 706.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("7_mcv6n")
+
+[node name="jogador1Sorteado" type="AudioStreamPlayer2D" parent="." unique_id=2033836927]
+stream = ExtResource("8_swln3")
+volume_db = 18.0
+
+[node name="jogador2Sorteado" type="AudioStreamPlayer2D" parent="." unique_id=1515491298]
+stream = ExtResource("9_48ix3")
+volume_db = 18.0
+
+[node name="anuncioSorteio" type="AudioStreamPlayer2D" parent="." unique_id=1255863124]
+stream = ExtResource("10_t0ggh")
+volume_db = 18.0
+
+[node name="botaoConfirmarCorrida" type="AudioStreamPlayer2D" parent="." unique_id=1102241142]
+stream = ExtResource("11_48ix3")
+volume_db = 18.0

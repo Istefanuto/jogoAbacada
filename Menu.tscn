@@ -1,0 +1,134 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/menu/volume.png" id="1_vol"]
+[ext_resource type="Script" path="res://Menu.gd" id="2_script"]
+[ext_resource type="Texture2D" path="res://assets/menu/door.png" id="3_door"]
+[ext_resource type="Texture2D" path="res://assets/menu/slider_vol2.png" id="4_slider2"]
+[ext_resource type="Texture2D" path="res://assets/menu/door2.png" id="5_door2"]
+[ext_resource type="Texture2D" path="res://assets/menu/muted.png" id="6_muted"]
+[ext_resource type="Texture2D" path="res://assets/menu/menu_fixo.png" id="7_fixo"]
+[ext_resource type="Texture2D" path="res://assets/menu/seta_back.png" id="8_seta"]
+[ext_resource type="Texture2D" path="res://assets/menu/Leitor.png" id="9_leitor"]
+[ext_resource type="Texture2D" path="res://assets/menu/menu_fixo_som.png" id="10_fixo_som"]
+[ext_resource type="Texture2D" path="res://assets/menu/menu_fixo_porta.png" id="11_fixo_porta"]
+[ext_resource type="FontFile" path="res://assets/Fontes/identidad/Identidad-ExtraBold.otf" id="12_font"]
+[ext_resource type="Texture2D" path="res://assets/menu/slider_vol.png" id="13_slider"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_slider"]
+texture = ExtResource("13_slider")
+expand_margin_left = 17.0
+expand_margin_right = 19.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_grabber"]
+texture = ExtResource("13_slider")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_grabber_hl"]
+texture = ExtResource("13_slider")
+
+[node name="Menu" type="Node2D"]
+z_index = 5
+script = ExtResource("2_script")
+
+[node name="MenuFixoPorta" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(48, 331.5)
+scale = Vector2(1, 0.996154)
+texture = ExtResource("11_fixo_porta")
+
+[node name="MenuFixoSom" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(46.875, 338.227)
+scale = Vector2(0.992268, 0.983382)
+texture = ExtResource("10_fixo_som")
+
+[node name="FundoMenu" type="Sprite2D" parent="."]
+position = Vector2(35, 330)
+texture = ExtResource("7_fixo")
+
+[node name="Menu" type="Sprite2D" parent="."]
+
+[node name="button_volume" type="Button" parent="Menu"]
+offset_left = 4.0
+offset_top = 263.0
+offset_right = 62.0
+offset_bottom = 322.0
+focus_mode = 0
+flat = true
+
+[node name="Volume_ON" type="Sprite2D" parent="Menu/button_volume"]
+position = Vector2(29, 30)
+texture = ExtResource("1_vol")
+
+[node name="Volume_OFF" type="Sprite2D" parent="Menu/button_volume"]
+visible = false
+position = Vector2(29, 31)
+texture = ExtResource("6_muted")
+
+[node name="button_sair" type="Button" parent="Menu"]
+offset_left = 5.0
+offset_top = 370.0
+offset_right = 61.0
+offset_bottom = 432.0
+focus_mode = 0
+flat = true
+
+[node name="Normal" type="Sprite2D" parent="Menu/button_sair"]
+position = Vector2(28, 31)
+texture = ExtResource("3_door")
+
+[node name="Aberta" type="Sprite2D" parent="Menu/button_sair"]
+visible = false
+position = Vector2(29, 30)
+texture = ExtResource("5_door2")
+
+[node name="Voltar" type="Sprite2D" parent="Menu/button_sair"]
+visible = false
+position = Vector2(32, 37)
+texture = ExtResource("8_seta")
+
+[node name="VSlider" type="VSlider" parent="Menu"]
+offset_left = 75.0
+offset_top = 181.0
+offset_right = 116.0
+offset_bottom = 482.0
+focus_mode = 0
+theme_override_icons/grabber = ExtResource("4_slider2")
+theme_override_icons/grabber_highlight = ExtResource("4_slider2")
+theme_override_icons/grabber_disabled = ExtResource("4_slider2")
+theme_override_styles/slider = SubResource("StyleBoxTexture_slider")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_grabber")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_grabber_hl")
+min_value = -20.0
+max_value = 5.0
+step = 0.0
+
+[node name="Leitor" type="Sprite2D" parent="."]
+position = Vector2(-140.25, 160)
+scale = Vector2(0.79, 0.86)
+texture = ExtResource("9_leitor")
+
+[node name="texto" type="Label" parent="Leitor"]
+offset_left = -47.0
+offset_top = -14.0
+offset_right = 44.0
+offset_bottom = 9.0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("12_font")
+theme_override_font_sizes/font_size = 18
+text = "VOLUME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer_porta" type="Timer" parent="."]
+
+[node name="Timer_volume" type="Timer" parent="."]
+
+[connection signal="mouse_entered" from="Menu/button_volume" to="." method="_on_button_volume_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/button_volume" to="." method="_on_button_volume_mouse_exited"]
+[connection signal="pressed" from="Menu/button_volume" to="." method="_on_button_volume_pressed"]
+[connection signal="mouse_entered" from="Menu/button_sair" to="." method="_on_button_sair_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/button_sair" to="." method="_on_button_sair_mouse_exited"]
+[connection signal="pressed" from="Menu/button_sair" to="." method="_on_button_sair_pressed"]
+[connection signal="value_changed" from="Menu/VSlider" to="." method="_on_v_slider_value_changed"]
+[connection signal="timeout" from="Timer_porta" to="." method="_on_timer_porta_timeout"]
+[connection signal="timeout" from="Timer_volume" to="." method="_on_timer_volume_timeout"]
