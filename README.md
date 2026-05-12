@@ -185,17 +185,6 @@ Este projeto foi desenvolvido com carinho visando apoiar o aprendizado infantil 
 
 ---
 
-# 📸 Imagens do Projeto
-
-## Cenário
-
-<img src="C:\Users\isabe\Downloads\cenário.png">
-
-## Personagens
-
-<img src="C:\Users\isabe\Downloads\personagens.png">
-
-
 
 ---
 
