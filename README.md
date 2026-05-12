@@ -189,11 +189,11 @@ Este projeto foi desenvolvido com carinho visando apoiar o aprendizado infantil 
 
 ## Cenário
 
-<img src="C:\Users\isabe\Downloads\cenário.png"/>
+<img src="C:\Users\isabe\Downloads\cenário.png">
 
 ## Personagens
 
-<img src="C:\Users\isabe\Downloads\personagens.png"/>
+<img src="C:\Users\isabe\Downloads\personagens.png">
 
 
 
